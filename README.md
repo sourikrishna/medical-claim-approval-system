@@ -1,138 +1,150 @@
-# Medical Insurance Claim Approval System
+# 🏥 Medical Insurance Claim Approval System
 
-An end-to-end machine learning application that predicts:
-1. Whether a medical insurance claim will be approved
-2. The approved payout amount (if approved)
+An end-to-end **Machine Learning web application** that predicts:
+- ✅ Whether a medical insurance claim will be **approved**
+- 💰 The **approved payout amount** (if approved)
 
-The project is fully deployed as a web application using Streamlit Cloud.
+The application is fully **deployed and publicly accessible** using Streamlit Cloud.
 
---------------------------------------------------
+---
 
-LIVE DEMO
-Live URL: [https://medical-claim-approval-system.streamlit.app](https://medical-claim-approval-system-emszxk9rwdfyibrqwftexe.streamlit.app/)
+## 🌐 Live Application
+🔗 https://medical-claim-approval-system-emszxk9rwdfyibrqwftexe.streamlit.app/
 
---------------------------------------------------
+---
 
-PROBLEM STATEMENT
-Medical insurance companies must evaluate claims efficiently while minimizing risk and financial loss.
-This project automates the claim decision process using machine learning to:
-- Predict claim approval (Yes / No)
-- Estimate the payable amount for approved claims
+## 📌 About the Project
+Medical insurance companies handle a large number of claims every day.  
+Manual evaluation is time-consuming, inconsistent, and costly.
 
---------------------------------------------------
+🎯 This project automates:
+- Claim approval decision
+- Approved payout estimation  
+using **Machine Learning models**, simulating a real-world insurance workflow.
 
-SOLUTION OVERVIEW
-The system uses a two-stage machine learning pipeline:
+---
 
-1) Claim Approval Model (Classification)
-- Predicts whether a claim should be approved
-- Outputs approval probability
+## ⚙️ Installation and Setup
 
-2) Approved Amount Model (Regression)
+### 1️⃣ Clone the repository
+git clone https://github.com/sourikrishna/medical-claim-approval-system.git
+cd medical-claim-approval-system
+
+
+---
+
+### 2️⃣ Create and activate virtual environment
+python -m venv venv
+venv\Scripts\activate
+
+
+---
+
+### 3️⃣ Install dependencies
+pip install -r requirements.txt
+
+
+---
+
+### 4️⃣ Run the application
+streamlit run app/streamlit_app.py
+
+
+---
+
+### 5️⃣ Open in browser
+http://localhost:8501
+
+
+---
+
+## 🧠 Machine Learning Workflow
+
+### 🔹 Claim Approval Model (Classification)
+- Predicts whether a claim is approved or rejected
+- Outputs an approval probability score
+
+### 🔹 Approved Amount Model (Regression)
 - Runs only if the claim is approved
-- Predicts the payable amount
+- Predicts the final payable amount
 
-This design mirrors real-world insurance workflows.
+---
 
---------------------------------------------------
-
-PROJECT STRUCTURE
+## 📁 Folder Structure
 
 medical-claim-approval-system/
 |
 |-- app/
-|   |-- streamlit_app.py        (Streamlit web application)
+| |-- streamlit_app.py # Streamlit web application
 |
 |-- data/
-|   |-- raw/medical_claims.csv  (Synthetic dataset)
+| |-- raw/
+| |-- medical_claims.csv # Synthetic dataset
 |
 |-- models/
-|   |-- approval_model.pkl      (Trained approval model)
-|   |-- amount_model.pkl        (Trained payout model)
+| |-- approval_model.pkl # Trained approval model
+| |-- amount_model.pkl # Trained payout model
 |
 |-- notebooks/
-|   |-- 01_eda.ipynb            (Exploratory Data Analysis)
+| |-- 01_eda.ipynb # Exploratory Data Analysis
 |
-|-- requirements.txt
+|-- requirements.txt # Project dependencies
 |-- .gitignore
 |-- README.md
 
---------------------------------------------------
 
-DATASET
-- The dataset is synthetically generated
-- Designed to simulate real-world medical insurance claims
-- Includes:
-  - Policy details
+---
+
+## 📊 Dataset Information
+- Synthetic dataset (privacy-safe)
+- Designed to simulate real medical insurance claims
+- Features include:
+  - Age & gender
+  - Policy type & sum insured
   - Hospital type
   - Disease category
-  - Claim amount
-  - Claim history
+  - Claimed amount
+  - Length of hospital stay
+  - Previous claims history
 
-Synthetic data is used due to privacy and regulatory constraints in healthcare.
+---
 
---------------------------------------------------
-
-TECHNOLOGIES USED
+## 🛠️ Tech Stack
 - Python
-- Pandas
-- NumPy
+- Pandas, NumPy
 - Scikit-learn
 - XGBoost
 - Streamlit
 - Joblib
 - Git & GitHub
 
---------------------------------------------------
+---
 
-MACHINE LEARNING MODELS
-- Logistic Regression (baseline)
-- Random Forest / XGBoost (final models)
-- Separate feature alignment for production inference
-
---------------------------------------------------
-
-KEY FEATURES
+## ✨ Key Features
 - Interactive web interface
 - Approval probability display
-- Payable amount estimation
-- Robust feature handling during deployment
-- Production-grade model loading
+- Payable amount prediction
+- Robust feature alignment for production
+- Fully deployed ML system
 
---------------------------------------------------
+---
 
-DEPLOYMENT
-The application is deployed using:
-- Streamlit Cloud
-- GitHub integration
-- Dependency management via requirements.txt
+## 🚀 Deployment
+- Deployed on **Streamlit Cloud**
+- GitHub-integrated CI/CD
+- Dependency management using `requirements.txt`
 
---------------------------------------------------
+---
 
-HOW TO RUN LOCALLY
-
-```bash
-git clone https://github.com/<your-username>/medical-claim-approval-system.git
-cd medical-claim-approval-system
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py
-
---------------------------------------------------
-
-FUTURE ENHANCEMENTS
+## 🔮 Future Enhancements
 - Explainable AI (SHAP)
-- Claim rejection reasons
-- PDF claim report generation
-- Authentication and role-based access
-- Cloud deployment on AWS or Azure
+- Claim rejection reasoning
+- Downloadable PDF claim reports
+- Authentication & access control
+- Cloud deployment on AWS / Azure
 
---------------------------------------------------
+---
 
-AUTHOR
-Souri Krishna  
-Aspiring Data Scientist
-
---------------------------------------------------
-
+## 👤 Author
+**Souri Krishna**  
+Aspiring Data Scientist 
